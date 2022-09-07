@@ -1,4 +1,5 @@
 install.packages("patchwork")
+library(tidyverse)
 library(gapminder)
 my_ttest<- gapminder%>%
   filter(continent=="Africa")%>%
@@ -36,3 +37,5 @@ gapminder%>%
     filter(country%in% c("Ireland", "Switzerland"))%>%
     ggplot(aes(lifeExp, fill= country))+
     geom_density(bw=2, adjust=1, alpha=0.5)+ xlim(50,100)
+
+  
